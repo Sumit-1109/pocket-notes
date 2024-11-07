@@ -32,6 +32,7 @@
 
 @media (max-width: 500px) {
     .noteTab{
+        height: 8%;
         padding-left: 5%;
         margin: 2%;
     }
