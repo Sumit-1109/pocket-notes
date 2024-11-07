@@ -1,0 +1,48 @@
+.noteTab{
+    position: relative;
+    height: 13%;
+    display: flex;
+    align-items: center;
+    padding: 2% 0%  2% 6%;
+    margin: 3% 2%;
+    cursor: pointer;
+    border-radius: 22px;
+}
+
+.logo{
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    color: rgba(255, 255, 255, 1);
+    font-size: 2vw;
+}
+
+.noteTab:hover{
+  background-color: rgba(47, 47, 47, 0.17);
+}
+
+.noteTabTitle{
+    font-size: 1.8vw;
+    letter-spacing: 0.025vw;
+}
+
+@media (max-width: 500px) {
+    .noteTab{
+        padding-left: 5%;
+        margin: 2%;
+    }
+    .logo{
+        height: 10vw;
+        width: 10vw;
+        font-size: 5vw;
+    }
+        
+    .noteTabTitle{
+        font-size: 5vw;
+        letter-spacing: 0.1vw;
+    }
+}

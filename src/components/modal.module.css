@@ -6,6 +6,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 100;
+    backdrop-filter: blur(1px);
 }
 
 .formarea{
@@ -21,7 +22,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding: 2%;
-    border-radius: 0.5vw;
+    border-radius: 1vw;
 }
 
 .header{
@@ -84,7 +85,12 @@
     border: none;
     margin: 1%;
     cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
   }
+
+  .chooseColor:hover { 
+    box-shadow: 0 0 5px currentColor;
+}
 
   .chooseColorText{
     font-size: 1.75vw;
