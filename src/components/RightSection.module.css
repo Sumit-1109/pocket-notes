@@ -47,3 +47,10 @@
     letter-spacing: 0.02vw;
     padding-left: 2%;
 }
+
+
+@media (max-width: 500px) {
+    .rightContainer{
+        display: none;
+    }
+}

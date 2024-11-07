@@ -39,3 +39,17 @@
     font-size: 4vw;
     line-height: 4.1vw;
 }
+
+@media (max-width: 500px) {
+    .leftContainer{
+        width: 100%;
+    }
+    .headingText{
+        font-size: 10vw;
+    }
+    .addNoteButton{
+        height: 10vw;
+        width: 10vw;
+        font-size: 8vw;
+    }
+}
