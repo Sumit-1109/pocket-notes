@@ -47,15 +47,22 @@
     .leftContainer{
         width: 100%;
     }
+    .heading{
+        justify-content: left !important; 
+    }
     .headingText{
         font-size: 10vw;
+        justify-content: flex-start;
+        padding-left: 12%;
     }
     .heading{
         height: 18%;
     }
     .addNoteButton{
-        height: 10vw;
-        width: 10vw;
+        height: 14vw;
+        width: 14vw;
         font-size: 8vw;
+        bottom: 7%;
+        right: 10%;
     }
 }

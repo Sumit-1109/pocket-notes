@@ -12,7 +12,7 @@ function LeftBar({setShowModal}) {
         </div>
 
 
-         <div className={styles.noteTabsContainer}>
+        <div className={styles.noteTabsContainer}>
         
         </div>
 
