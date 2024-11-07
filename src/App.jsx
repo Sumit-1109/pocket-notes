@@ -1,7 +1,7 @@
+
+
 import LeftBar from './components/LeftBar';
 import RightSection from './components/RightSection';
-
-
 
 import './App.css'
 
@@ -13,7 +13,7 @@ function App() {
       <LeftBar />
 
       <RightSection />
-      
+
     </div>
   )
 }

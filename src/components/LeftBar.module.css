@@ -1,5 +1,41 @@
 .leftContainer{
     width: 28%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     background-color: #FFFFFF;
+}
+
+.heading{
+    width: 100%;
+    height: 22%;
+    z-index: 100;
+}
+
+.headingText{
+    font-size: 3vw;
+    color: rgba(0, 0, 0, 1);
+    letter-spacing: 0.02rem;
+}
+
+.noteTabsContainer{
+    width: 100%;
+    height: 78%;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.addNoteButton{
+    height: 4.8vw;
+    width: 4.8vw;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 5%;
+    right: 7%;
+    background-color: rgba(22, 0, 139, 1);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    font-size: 4vw;
+    line-height: 4.1vw;
 }
