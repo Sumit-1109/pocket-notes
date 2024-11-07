@@ -38,6 +38,11 @@
     align-items: center;
 }
 
+.align-center{
+  display: flex;
+  align-items: center;
+}
+
 
 button:disabled{
   cursor: not-allowed;

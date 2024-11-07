@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types'
+
 import styles from './LeftBar.module.css';
 import './commonStyles.css'
 
 
-function LeftBar() {
+function LeftBar({setShowModal}) {
   return (
     <div className={styles.leftContainer}>
          <div className={`flex-center roboto-medium ${styles.heading}`}>
@@ -15,7 +17,7 @@ function LeftBar() {
         </div>
 
 
-        <button className={`roboto-medium flex-center ${styles.addNoteButton}`} >
+        <button className={`roboto-medium flex-center ${styles.addNoteButton}`} onClick={() => setShowModal(true)} >
             +
         </button>
 
@@ -25,3 +27,9 @@ function LeftBar() {
 }
 
 export default LeftBar
+
+
+
+LeftBar.propTypes = {
+    setShowModal : PropTypes.func.isRequired,
+}

@@ -1,0 +1,148 @@
+.modalScreen{
+    background-color: rgba(47, 47, 47, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+.formarea{
+    height: 100%;
+    width: 100%;
+}
+
+.modalBox{
+    background-color: rgba(255, 255, 255, 1);
+    width: 50%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2%;
+    border-radius: 0.5vw;
+}
+
+.header{
+    height: 20%;
+    margin-bottom: 1.3%;
+}
+
+.title{
+    font-size: 2vw;
+    line-height: 2.25vw;
+    letter-spacing: 0.025vw;
+}
+
+.groupName{
+    height: 30%;
+    font-size: 1.75vw;
+    line-height: 2vw;
+}
+
+.groupName_Text{
+    border-radius: 22px;
+    height: 70%;
+    width: 70%;
+    border: 2px solid rgba(204, 204, 204, 1);
+    padding-left: 3%;
+    margin-left: 4%;
+    font-size: 1.75vw;
+    line-height: 1.75vw;
+    box-sizing: border-box;
+  }
+
+  .groupName_Text::placeholder{
+    font-size: 1.75vw;
+    color: rgba(151, 151, 151, 1);
+    line-height: 1.75vw;
+  }
+
+  .colorTheme{
+    width: 100%;
+  }
+
+  .colorPallete{
+    width: 60%;
+    margin-left: 4%;
+    height: 100%;
+    overflow: visible;
+  }
+  
+  .chooseColor{
+    height: 7vh;
+    width: 7vh;
+    border-radius: 50%;
+    border: none;
+    margin: 1%;
+    cursor: pointer;
+  }
+
+  .chooseColorText{
+    font-size: 1.75vw;
+    line-height: 2vw;
+}
+
+.createButton{
+    height: 13%;
+    width: 97%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2%;
+}
+.create{
+    background-color: rgba(0, 31, 139, 1);
+    height: 100%;
+    border: none;
+    border-radius: 0.8vw;
+    width: 20%;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.25vw;
+}
+
+
+
+@media (max-width: 500px) {
+    .modalBox{
+        width: 80%;
+        height: 30%;
+    }
+    
+    .title{
+        font-size: 5vw;
+        line-height: 5.5vw;
+        letter-spacing: 0.2vw;
+    }  
+    .groupName{
+        height: 25%;
+        font-size: 4vw;
+        line-height: 4.25vw;
+    }
+    .groupName_Text{
+        height: 90%;
+        width: 65%;
+        margin-left: 2%;
+        font-size: 4vw;
+        line-height: 4vw;
+      }
+      .groupName_Text::placeholder{
+        font-size: 4vw;
+        line-height: 4.25vw;
+      }
+      .chooseColor{
+        height: 7vw;
+        width: 7vw;
+      }   
+      .chooseColorText{
+        font-size: 4vw;
+        line-height: 4.25vw;
+    }
+    .createButton{
+        height: 15%;
+    }
+    .create{
+        width: 25%;
+        font-size: 3.75vw;
+    }
+}

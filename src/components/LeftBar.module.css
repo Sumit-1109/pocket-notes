@@ -9,19 +9,22 @@
 
 .heading{
     width: 100%;
-    height: 22%;
+    height: 20%;
     z-index: 100;
+    padding: 0;
+    margin: 0;
 }
 
 .headingText{
     font-size: 3vw;
     color: rgba(0, 0, 0, 1);
     letter-spacing: 0.02rem;
+    padding-top: 2%;
 }
 
 .noteTabsContainer{
     width: 100%;
-    height: 78%;
+    height: 80%;
     flex-grow: 1;
     overflow-y: auto;
 }
@@ -46,6 +49,9 @@
     }
     .headingText{
         font-size: 10vw;
+    }
+    .heading{
+        height: 18%;
     }
     .addNoteButton{
         height: 10vw;
