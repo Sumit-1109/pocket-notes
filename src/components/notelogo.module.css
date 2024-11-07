@@ -1,0 +1,19 @@
+.logo{
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    color: rgba(255, 255, 255, 1);
+    font-size: 2vw;
+}
+
+@media (max-width: 500px) {
+    .logo{
+        height: 15vw;
+        width: 15vw;
+        font-size: 7.5vw;
+    }
+}

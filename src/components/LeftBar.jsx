@@ -5,7 +5,7 @@ import './commonStyles.css'
 
 import NoteTab from './NoteTab';
 
-function LeftBar({setShowModal, noteGroups,}) {
+function LeftBar({setShowModal, noteGroups, setActiveNote, activeNote}) {
   return (
     <div className={styles.leftContainer}>
          <div className={`roboto-medium ${styles.heading}`}>
@@ -15,7 +15,7 @@ function LeftBar({setShowModal, noteGroups,}) {
 
         <div className={styles.noteTabsContainer}>
             {noteGroups.map((noteGroup, index) => (
-                <NoteTab key={index} noteGroup={noteGroup} />
+                <NoteTab key={index} noteGroup={noteGroup} activeNote={activeNote} setActiveNote={setActiveNote} />
             ))}
         </div>
 
@@ -41,4 +41,6 @@ LeftBar.propTypes = {
           noteLogoColor: PropTypes.string.isRequired,
         })
       ).isRequired,
+      activeNote: PropTypes.shape({ noteGroupName: PropTypes.string, }),
+      setActiveNote: PropTypes.func.isRequired,
 }

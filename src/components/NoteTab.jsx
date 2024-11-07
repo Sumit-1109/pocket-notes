@@ -1,26 +1,24 @@
 import PropTypes from 'prop-types';
 import styles from './notetab.module.css';
 
+import NoteLogo from './NoteLogo';
+
 import './commonStyles.css'
 
-function NoteTab({noteGroup}) {
+function NoteTab({noteGroup, setActiveNote, activeNote}) {
 
   const{noteGroupName, noteLogoColor} = noteGroup;
 
+  const handleClick = () => {
+    setActiveNote(prevActiveNote => (prevActiveNote && prevActiveNote.noteGroupName === noteGroup.noteGroupName ? null : noteGroup))
+  }
 
-  const extractInitials = (noteGroupName) => {
-    return (noteGroupName.trim()
-                .split(' ')
-                .map((word)=> word.slice(0,1).toUpperCase())
-                .slice(0,2)
-                .join(''))
-};
+  const isActive =activeNote && (activeNote.noteGroupName === noteGroupName);
+  const noteTabClass = `${isActive ? styles.active : ''} ${styles.noteTab}`;
 
   return (
-    <div className={styles.noteTab} >
-      <div className={`${styles.logo} roboto-medium`}  style={{ backgroundColor: noteLogoColor }}>
-        {extractInitials(noteGroupName)}
-      </div>
+    <div className={noteTabClass} onClick={handleClick} >
+      <NoteLogo noteGroupName={noteGroupName} noteLogoColor={noteLogoColor} />
       <p className={`${styles.noteTabTitle} roboto-medium`}>{noteGroupName.trim()}</p>
     </div>
   )

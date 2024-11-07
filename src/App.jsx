@@ -3,6 +3,7 @@ import { useState } from 'react'
 import LeftBar from './components/LeftBar';
 import RightSection from './components/RightSection';
 import Modal from './components/Modal';
+import NoteWindow from './components/NoteWindow';
 
 import './App.css'
 
@@ -18,15 +19,17 @@ function App() {
   const handleSaveData = (noteGroups) => {
     
     localStorage.setItem('noteGroups', JSON.stringify(noteGroups));
-    
+
   }
+
+  const[activeNote, setActiveNote] = useState(null);
 
   return (
     <div className='main'>
 
-      <LeftBar setShowModal={setShowModal} noteGroups={noteGroups} />
+      <LeftBar setShowModal={setShowModal} noteGroups={noteGroups} setActiveNote={setActiveNote} activeNote={activeNote} />
 
-      <RightSection />
+      {activeNote !== null ? <NoteWindow setNoteGroups={setNoteGroups} noteGroups={noteGroups} clickedNote={activeNote} handleSaveData={handleSaveData} /> : (<RightSection />)}
 
       {showModal && <Modal setShowModal={setShowModal} setModalData={setModalData} modalData={modalData} noteGroups={noteGroups} setNoteGroups={setNoteGroups} handleSaveData={handleSaveData} /> }
 
