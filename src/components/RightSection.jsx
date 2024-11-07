@@ -1,4 +1,4 @@
-import styles from './rightsection.module.css';
+import styles from './RightSection.module.css';
 
 function RightSection() {
   return (

@@ -1,4 +1,4 @@
-import styles from './leftbar.module.css';
+import styles from './LeftBar.module.css';
 
 function LeftBar() {
   return (
