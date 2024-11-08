@@ -6,8 +6,11 @@ import './commonStyles.css'
 import NoteTab from './NoteTab';
 
 function LeftBar({setShowModal, noteGroups, setActiveNote, activeNote}) {
+
+  const leftContainerClass = `${styles.leftContainer} ${activeNote ? styles.hideLeftSection : ''}`;
+
   return (
-    <div className={styles.leftContainer}>
+    <div className={leftContainerClass}>
          <div className={`roboto-medium ${styles.heading}`}>
             <p className={styles.headingText}>Pocket Notes</p>
         </div>

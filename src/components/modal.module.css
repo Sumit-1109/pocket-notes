@@ -89,7 +89,12 @@
   }
 
   .chooseColor:hover { 
-    box-shadow: 0 0 5px currentColor;
+    box-shadow: 0 0 4px rgb(45, 43, 43);
+}
+
+.chooseColor.glow{
+    box-shadow: 0 0 2px black, 0 0 4px black;
+    border: 0.1px rgb(0, 0, 0) solid;
 }
 
   .chooseColorText{

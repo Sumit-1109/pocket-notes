@@ -81,10 +81,6 @@ function Modal({
 
   const handleColorSelect = (e, selectedColor) => {
     e.preventDefault();
-    document.querySelectorAll(`.${styles.chooseColor}`).forEach((button) => {
-      button.style.boxShadow = "";
-    });
-    e.target.style.boxShadow = `0 0 20px ${selectedColor}, 0 0 40px ${selectedColor}`;
     setModalData((prev) => ({ ...prev, color: selectedColor }));
     setIsDisabled(!(modalData.name.trim() !== "" && selectedColor !== ""));
   };
@@ -129,7 +125,7 @@ function Modal({
                 <button
                   key={colorKey}
                   type="button"
-                  className={styles.chooseColor}
+                  className={`${styles.chooseColor} ${modalData.color === colorpallete[colorKey] ? styles.glow : ''}`}
                   style={{ backgroundColor: colorpallete[colorKey] }}
                   onClick={(e) => handleColorSelect(e, colorpallete[colorKey])}
                 ></button>

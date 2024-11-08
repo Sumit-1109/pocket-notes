@@ -53,7 +53,8 @@
 
 @media (max-width: 500px) {
     .leftContainer{
-        width: 100%;
+        width: 100vw;
+        height: 99vh;
     }
     .heading{
         align-items: flex-start;
@@ -68,7 +69,10 @@
         height: 14vw;
         width: 14vw;
         font-size: 8vw;
-        bottom: 10vh;
-        right: 12vw;
+        bottom: 15vh;
+        right: 14vw;
+    }
+    .hideLeftSection{
+        display: none;
     }
 }

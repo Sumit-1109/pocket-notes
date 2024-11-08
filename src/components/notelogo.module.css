@@ -1,19 +1,28 @@
 .logo{
-    height: 4vw;
-    width: 4vw;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-right: 5%;
     color: rgba(255, 255, 255, 1);
     font-size: 2vw;
 }
 
+.logoInactive{
+    height: 4vw;
+    width: 4vw;
+}
+.logoActive{
+    height: 4.5vw;
+    width: 4.5vw;
+}
+
 @media (max-width: 500px) {
-    .logo{
+    .logoInactive{
         height: 15vw;
         width: 15vw;
         font-size: 7.5vw;
+    }
+    .logoActive{
+        height: 12vw;
+        width: 12vw;
+        font-size: 7vw;
     }
 }
