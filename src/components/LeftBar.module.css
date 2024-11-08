@@ -25,6 +25,7 @@
     letter-spacing: 0.02rem;
     margin: 0;
     padding-bottom: 3%;
+    cursor: pointer;
 }
 
 .noteTabsContainer{
@@ -35,8 +36,8 @@
 }
 
 .addNoteButton{
-    height: 4.8vw;
-    width: 4.8vw;
+    height: 4vw;
+    width: 4vw;
     position: absolute;
     border-radius: 50%;
     bottom: 5%;
@@ -44,8 +45,8 @@
     background-color: rgba(22, 0, 139, 1);
     color: rgba(255, 255, 255, 1);
     border: none;
-    font-size: 4vw;
-    line-height: 4.1vw;
+    font-size: 3.5vw;
+    line-height: 3.5vw;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     z-index: 100;
     cursor: pointer;

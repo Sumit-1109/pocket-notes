@@ -6,6 +6,8 @@ import sendButton from "../assets/send.png";
 import sendActive from "../assets/send-active.png";
 import back from "../assets/back.png";
 
+import FinalNote from "./FinalNote";
+
 
 function NoteWindow({
   setNoteGroups,
@@ -15,10 +17,33 @@ function NoteWindow({
   handleSaveData,
 }) {
 
+  const notes = clickedNote.notes;
   const [noteText, setNoteText] = useState("");
+  const [actualNotes, setActualNotes] = useState('');
+
+
+
+  const handleSaveNoteText = () => {
+    setActualNotes(noteText);
+    setNoteText('');
+  }
+
 
   const handleChange = (e) => {
     setNoteText(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (noteText.trim() !== "") {
+      handleSaveNoteText();
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' &&  noteText.trim() !== "") {
+        handleSubmit(e);
+    }
   }
 
   return (
@@ -43,17 +68,18 @@ function NoteWindow({
 
 
       <div className={styles.content}>
-        
+      {actualNotes !== '' && <FinalNote noteText={actualNotes}/>}
       </div>
 
 
       <div className={styles.footer}>
-        <form className={styles.noteTextArea}>
+        <form className={styles.noteTextArea} onSubmit={handleSubmit}>
           <textarea
             className={`${styles.noteTextBox} roboto-regular`}
             placeholder="Enter your text here..........."
             value={noteText}
             onChange={handleChange}
+            onKeyDown={handleKeyDown}
           />
           <button type="submit" className={styles.noteWindowSubmitButton}>
             <img

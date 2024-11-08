@@ -12,7 +12,7 @@ function LeftBar({setShowModal, noteGroups, setActiveNote, activeNote}) {
   return (
     <div className={leftContainerClass}>
          <div className={`roboto-medium ${styles.heading}`}>
-            <p className={styles.headingText}>Pocket Notes</p>
+            <p className={styles.headingText} onClick={() => setActiveNote(null)}>Pocket Notes</p>
         </div>
 
 
