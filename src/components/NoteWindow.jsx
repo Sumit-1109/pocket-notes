@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import NoteLogo from "./NoteLogo";
+import PropTypes from "prop-types";
 import "./commonStyles.css";
 import styles from "./NoteWindow.module.css";
 import sendButton from "../assets/send.png";
@@ -27,11 +28,27 @@ function NoteWindow({
     setNoteText(e.target.value);
   }
 
+  useEffect(()=> {
+    const savedNotes = JSON.parse(localStorage.getItem('noteGroups')) || [];
+    const requiredGroup = savedNotes.find(group => group.noteGroupName === clickedNote.noteGroupName);
+    setActualNotes(requiredGroup ? requiredGroup.notes : []);
+  }, [clickedNote.noteGroupName])
 
   const handleSaveNoteText = () => {
     const updatedActualNotes = [...actualNotes, noteText];
+
+    const updatedNoteGroups = noteGroups.map((group) => {
+      if (group.noteGroupName === clickedNote.noteGroupName){
+        return {...group, notes: updatedActualNotes}
+      }
+      return group;
+    })
+
     setActualNotes(updatedActualNotes);
-    setNoteText('');
+    setNoteGroups(updatedNoteGroups);
+    handleSaveData(updatedNoteGroups);
+
+      setNoteText('');
   }
 
 
@@ -83,8 +100,9 @@ function NoteWindow({
 
 
       <div className={styles.footer}>
-        <form className={styles.noteTextArea} onSubmit={handleSubmit}>
+        <form id="textBox" className={styles.noteTextArea} onSubmit={handleSubmit}>
           <textarea
+            id="textArea"
             className={`${styles.noteTextBox} roboto-regular`}
             placeholder="Enter your text here..........."
             value={noteText}
@@ -105,3 +123,23 @@ function NoteWindow({
 }
 
 export default NoteWindow;
+
+
+
+NoteWindow.propTypes = {
+  clickedNote: PropTypes.shape({
+    noteGroupName: PropTypes.string.isRequired,
+    noteLogoColor: PropTypes.string.isRequired,
+    notes: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  }).isRequired,
+  noteGroups: PropTypes.arrayOf(
+    PropTypes.shape({
+      noteGroupName: PropTypes.string.isRequired,
+      noteLogoColor: PropTypes.string.isRequired,
+      notes: PropTypes.arrayOf( PropTypes.string.isRequired).isRequired,
+    })
+  ).isRequired,
+  setClickedNote: PropTypes.func.isRequired,
+  setNoteGroups: PropTypes.func.isRequired,
+  handleSaveData: PropTypes.func.isRequired,
+};

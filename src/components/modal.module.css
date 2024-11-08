@@ -76,6 +76,7 @@
     margin-left: 4%;
     height: 100%;
     overflow: visible;
+    border: 1px solid maroon;
   }
   
   .chooseColor{
@@ -86,14 +87,19 @@
     margin: 1%;
     cursor: pointer;
     transition: box-shadow 0.3s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .chooseColor:hover { 
-    box-shadow: 0 0 4px rgb(45, 43, 43);
+    box-shadow: 0 0 0.5vw rgb(45, 43, 43);
+}
+
+.chooseColor:focus{
+    outline: none;
 }
 
 .chooseColor.glow{
-    box-shadow: 0 0 2px black, 0 0 4px black;
+    box-shadow: 0 0 0.4vw 0.09vw black;
     border: 0.1px rgb(0, 0, 0) solid;
 }
 

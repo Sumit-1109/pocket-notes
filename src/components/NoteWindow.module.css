@@ -78,8 +78,8 @@
     padding: 1%;
     resize: none;
     overflow-y: auto;
-    font-size: 2vw;
-    line-height: 2.5vw;
+    font-size: 1.5vw;
+    line-height: 1.7vw;
     position: relative;
 }
 
@@ -91,8 +91,8 @@ textarea:focus{
 
 textarea::placeholder{
     color: rgba(154, 154, 154, 1);
-    font-size: 2vw;
-    line-height: 2.5vw;
+    font-size: 1.5vw;
+    line-height: 1.7vw;
 }
 
 .noteWindowSubmitButton{

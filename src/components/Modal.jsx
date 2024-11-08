@@ -80,7 +80,6 @@ function Modal({
   };
 
   const handleColorSelect = (e, selectedColor) => {
-    e.preventDefault();
     setModalData((prev) => ({ ...prev, color: selectedColor }));
     setIsDisabled(!(modalData.name.trim() !== "" && selectedColor !== ""));
   };
@@ -89,6 +88,7 @@ function Modal({
     <div className={`flex-center ${styles.modalScreen}`}>
       <div className={styles.modalBox}>
         <form
+          id="modalData"
           onSubmit={handleSubmit}
           className={styles.formarea}
           ref={modalRef}
@@ -117,18 +117,19 @@ function Modal({
           </div>
 
           <div className={`align-center ${styles.colorTheme}`}>
-            <p className={`roboto-medium ${styles.chooseColorText}`}>
+            <label htmlFor="chooseColor" className={`roboto-medium ${styles.chooseColorText}`}>
               Choose Colour
-            </p>
+            </label>
             <div className={`flex-center ${styles.colorPallete}`}>
               {Object.keys(colorpallete).map((colorKey) => (
-                <button
+                <div
+                  id="chooseColor"
                   key={colorKey}
                   type="button"
                   className={`${styles.chooseColor} ${modalData.color === colorpallete[colorKey] ? styles.glow : ''}`}
                   style={{ backgroundColor: colorpallete[colorKey] }}
                   onClick={(e) => handleColorSelect(e, colorpallete[colorKey])}
-                ></button>
+                ></div>
               ))}
             </div>
           </div>
