@@ -16,13 +16,13 @@
 
 @media (max-width: 500px) {
     .logoInactive{
-        height: 15vw;
-        width: 15vw;
+        height: 14vw;
+        width: 14vw;
         font-size: 7.5vw;
     }
     .logoActive{
-        height: 12vw;
-        width: 12vw;
+        height: 13vw;
+        width: 13vw;
         font-size: 7vw;
     }
 }

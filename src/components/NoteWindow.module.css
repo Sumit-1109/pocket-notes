@@ -36,12 +36,13 @@
 
 .content{
     background-color: rgba(218, 229, 245, 1);
-    height: 63%;
+    height: 62%;
     width: 100%;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1% 0%;
 }
 
 .footer{
@@ -115,28 +116,29 @@ textarea::placeholder{
         height: 100vh;
     }
     .noteheader{
-        height: 10%;
+        height: 11%;
     }
     .headerLogo{
         margin: 0% 4% 0% 3%;
     }
     .noteGroupNameTitle{
-        font-size: 5vw;
+        font-size: 6.5vw;
         letter-spacing: 0.2vw;
     }
     .content{
-        height: 72%;
+        height: 69%;
     }
     .footer{
-        height: 18%;
+        height: 20%;
     }
     .noteTextArea{
         width: 95%;
         height: 80%;
     }
     .noteTextBox{
-        font-size: 4vw;
-        line-height: 2.5vw;
+        font-size: 6vw;
+        line-height: 6.5vw;
+        letter-spacing: 0.15vw;
     }
     .backButtonContainer{
         height: 40%;
@@ -145,6 +147,11 @@ textarea::placeholder{
         align-items: center;
         justify-content: center;
         margin-left: 4%;
+    }
+    textarea::placeholder{
+        font-size: 6vw;
+        line-height: 6.5vw;
+        letter-spacing: 0.15vw;
     }
     .sendButton{
         height: 70%;

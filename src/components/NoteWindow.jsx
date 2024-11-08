@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import NoteLogo from "./NoteLogo";
 import "./commonStyles.css";
 import styles from "./NoteWindow.module.css";
@@ -19,19 +19,21 @@ function NoteWindow({
 
   const notes = clickedNote.notes;
   const [noteText, setNoteText] = useState("");
-  const [actualNotes, setActualNotes] = useState('');
+  const [actualNotes, setActualNotes] = useState(notes);
 
-
-
-  const handleSaveNoteText = () => {
-    setActualNotes(noteText);
-    setNoteText('');
-  }
-
+  const contentRef = useRef(null);
 
   const handleChange = (e) => {
     setNoteText(e.target.value);
   }
+
+
+  const handleSaveNoteText = () => {
+    const updatedActualNotes = [...actualNotes, noteText];
+    setActualNotes(updatedActualNotes);
+    setNoteText('');
+  }
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,6 +47,12 @@ function NoteWindow({
         handleSubmit(e);
     }
   }
+
+  useEffect(()=>{
+    if (contentRef.current){
+      contentRef.current.scrollTop = contentRef.current.scrollHeight;
+    }
+  }, [actualNotes]);
 
   return (
     <div className={styles.notewindow}>
@@ -67,8 +75,10 @@ function NoteWindow({
       </div>
 
 
-      <div className={styles.content}>
-      {actualNotes !== '' && <FinalNote noteText={actualNotes}/>}
+      <div className={styles.content} ref={contentRef}>
+      {actualNotes.map((note, index) => (
+        <FinalNote key={index} noteText={note} />
+      ) )}
       </div>
 
 

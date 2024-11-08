@@ -42,13 +42,13 @@
         margin: 2%;
     }
     .logo{
-        height: 15vw;
-        width: 15vw;
-        font-size: 7.5vw;
+        height: 14vw;
+        width: 14vw;
+        font-size: 7vw;
     }
         
     .noteTabTitle{
-        font-size: 7.5vw;
+        font-size: 7vw;
         letter-spacing: 0.1vw;
     }
 }
