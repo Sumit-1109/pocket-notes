@@ -87,7 +87,6 @@
     margin: 1%;
     cursor: pointer;
     transition: box-shadow 0.3s ease-in-out;
-    -webkit-tap-highlight-color: transparent;
   }
 
   .chooseColor:hover { 
@@ -139,7 +138,7 @@
 
 @media (max-width: 500px) {
     .modalBox{
-        width: 80%;
+        width: 85%;
         height: 30%;
     }
     

@@ -117,13 +117,12 @@ function Modal({
           </div>
 
           <div className={`align-center ${styles.colorTheme}`}>
-            <label htmlFor="chooseColor" className={`roboto-medium ${styles.chooseColorText}`}>
+            <label className={`roboto-medium ${styles.chooseColorText}`}>
               Choose Colour
             </label>
             <div className={`flex-center ${styles.colorPallete}`}>
               {Object.keys(colorpallete).map((colorKey) => (
                 <div
-                  id="chooseColor"
                   key={colorKey}
                   type="button"
                   className={`${styles.chooseColor} ${modalData.color === colorpallete[colorKey] ? styles.glow : ''}`}
@@ -162,12 +161,8 @@ Modal.propTypes = {
     PropTypes.shape({
       noteGroupName: PropTypes.string.isRequired,
       noteLogoColor: PropTypes.string.isRequired,
-      notes: PropTypes.arrayOf(
-        PropTypes.shape({
-          text: PropTypes.string.isRequired,
-        })
-      ).isRequired,
-    })
+      notes: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
+    }).isRequired,
   ).isRequired,
   setNoteGroups: PropTypes.func.isRequired,
   handleSaveData: PropTypes.func.isRequired,

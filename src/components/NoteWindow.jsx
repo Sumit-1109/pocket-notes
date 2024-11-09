@@ -93,9 +93,9 @@ function NoteWindow({
 
 
       <div className={styles.content} ref={contentRef}>
-      {actualNotes.map((note, index) => (
-        <FinalNote key={index} noteText={note} />
-      ) )}
+        {actualNotes.map((note, index) => (
+            <FinalNote key={index} noteText={note} />
+        ) )};
       </div>
 
 

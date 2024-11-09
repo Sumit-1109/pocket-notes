@@ -1,24 +1,13 @@
 .noteTab{
     position: relative;
-    height: 13%;
+    height: 10%;
     display: flex;
     align-items: center;
-    padding: 2% 0%  2% 6%;
-    margin: 3% 2%;
+    padding: 1% 0%  1% 6%;
+    margin: 1.5% 2.5%;
     cursor: pointer;
     border-radius: 22px;
-}
-
-.logo{
-    height: 4vw;
-    width: 4vw;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 5%;
-    color: rgba(255, 255, 255, 1);
-    font-size: 2vw;
+    border: 1px solid maroon;
 }
 
 .noteTab:hover{
@@ -31,8 +20,8 @@
   }
 
 .noteTabTitle{
-    font-size: 1.8vw;
-    letter-spacing: 0.025vw;
+    font-size: 1.6vw;
+    letter-spacing: 0.05vw;
 }
 
 @media (max-width: 500px) {

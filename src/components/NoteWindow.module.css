@@ -6,13 +6,14 @@
 
 .notewindow{
     width: 78%;
-    height: 100%;
-    position: relative;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 .noteheader{
     background-color: rgba(0, 31, 139, 1);
-    height: 12%;
+    height: 11%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -25,41 +26,40 @@
     height: 100%;
 }
 .headerLogo{
-    margin: 0 1.5% 0 3%;
+    margin: 0 1.5% 0 1.2%;
 }
 
 .noteGroupNameTitle{
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: rgba(255, 255, 255, 1);
     letter-spacing: 0.025vw;
 }
 
 .content{
     background-color: rgba(218, 229, 245, 1);
-    height: 62%;
+    height: 65%;
     width: 100%;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1% 0%;
+    overflow-y: auto;
 }
 
 .footer{
     background-color: rgba(0, 31, 139, 1);
-    height: 25%;
+    height: 24%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    bottom: 0;
 }
 
 .noteTextArea{
     background-color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(204, 204, 204, 1);
-    height: 90%;
-    width: 98.5%;
+    height: 84%;
+    width: 96%;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -78,8 +78,8 @@
     padding: 1%;
     resize: none;
     overflow-y: auto;
-    font-size: 1.5vw;
-    line-height: 1.7vw;
+    font-size: 1.4vw;
+    line-height: 1.6vw;
     position: relative;
 }
 
@@ -91,8 +91,8 @@ textarea:focus{
 
 textarea::placeholder{
     color: rgba(154, 154, 154, 1);
-    font-size: 1.5vw;
-    line-height: 1.7vw;
+    font-size: 1.4vw;
+    line-height: 1.6vw;
 }
 
 .noteWindowSubmitButton{
