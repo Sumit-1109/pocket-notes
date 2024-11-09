@@ -43,6 +43,7 @@
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
+    padding-bottom: 2%;
 }
 
 .footer{
@@ -110,16 +111,16 @@ textarea::placeholder{
 }
 
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .notewindow{
         width: 100vw;
-        height: 100vh;
+        height: 100dvh;
     }
     .noteheader{
-        height: 11%;
+        height: 10%;
     }
     .headerLogo{
-        margin: 0% 4% 0% 3%;
+        margin: 0% 4% 0% 4%;
     }
     .noteGroupNameTitle{
         font-size: 6.5vw;
@@ -129,32 +130,73 @@ textarea::placeholder{
         height: 69%;
     }
     .footer{
-        height: 20%;
+        height: 21%;
+    }
+    .noteTextArea{
+        width: 95%;
+        height: 75%;
+    }
+    .noteTextBox{
+        font-size: 5vw;
+        line-height: 1.25;
+        letter-spacing: 0.05vw;
+    }
+    .backButtonContainer{
+        height: 40%;
+        width: 6%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 4.5%;
+    }
+    textarea::placeholder{
+        font-size: 5vw;
+        line-height: 1.25;
+        letter-spacing: 0.05vw;
+    }
+    .sendButton{
+        height: 70%;
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .notewindow{
+        width: 65vw;
+        height: 100dvh;
+    }
+    .noteheader{
+        height: 8.5%;
+    }
+    .headerLogo{
+        margin: 0% 4% 0% 3%;
+    }
+    .noteGroupNameTitle{
+        font-size: 3vw;
+        letter-spacing: 0.2vw;
+    }
+    .content{
+        height: 69.5%;
+    }
+    .footer{
+        height: 22%;
     }
     .noteTextArea{
         width: 95%;
         height: 80%;
     }
     .noteTextBox{
-        font-size: 6vw;
-        line-height: 6.5vw;
+        font-size: 3vw;
+        line-height: 1.25;
         letter-spacing: 0.15vw;
     }
-    .backButtonContainer{
-        height: 40%;
-        width: 5%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 4%;
-    }
     textarea::placeholder{
-        font-size: 6vw;
-        line-height: 6.5vw;
+        font-size: 3vw;
+        line-height: 1.25;
         letter-spacing: 0.15vw;
     }
     .sendButton{
-        height: 70%;
-        width: 70%;
+        height: 80%;
+        width: 80%;
     }
 }

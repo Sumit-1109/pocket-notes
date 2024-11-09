@@ -52,14 +52,15 @@
     cursor: pointer;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .leftContainer{
         width: 100vw;
-        height: 99vh;
+        height: 100dvh;
     }
     .heading{
         align-items: flex-start;
-        height: 13%;
+        padding-top: 2%;
+        height: 10%;
     }
     .headingText{
         font-size: 10vw;
@@ -69,11 +70,35 @@
     .addNoteButton{
         height: 14vw;
         width: 14vw;
-        font-size: 8vw;
-        bottom: 12vh;
-        right: 7.5vw;
+        font-size: 9vw;
+        bottom: 8vh;
+        right: 8.5vw;
     }
     .hideLeftSection{
         display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .leftContainer{
+        width: 35vw;
+        height: 100dvh;
+    }
+    .heading{
+        align-items: flex-start;
+        height: 10%;
+        padding-bottom: 5%;
+    }
+    .headingText{
+        font-size: 4vw;
+        justify-content: flex-start;
+        padding-left: 12%;
+    }
+    .addNoteButton{
+        height: 7vw;
+        width: 7vw;
+        font-size: 5.5vw;
+        bottom: 6vh;
+        right: 4vw;
     }
 }

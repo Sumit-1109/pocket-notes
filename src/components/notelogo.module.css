@@ -1,28 +1,56 @@
-.logo{
+.logo {
     border-radius: 50%;
     margin-right: 5%;
     color: rgba(255, 255, 255, 1);
-    font-size: 2vw;
-}
-
-.logoInactive{
     height: 4vw;
     width: 4vw;
-}
-.logoActive{
-    height: 4vw;
-    width: 4vw;
+    font-size: 5vw;
 }
 
-@media (max-width: 500px) {
-    .logoInactive{
+
+@media only screen and (max-width: 600px) {
+    .logo {
         height: 14vw;
         width: 14vw;
-        font-size: 7.5vw;
+        font-size: 6vw;
     }
-    .logoActive{
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .logo {
+        height: 9.1vw;
+        width: 9.1vw;
+        font-size: 4vw;
+    }
+}
+
+
+/* @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .logoInactive {
+        height: 11vmin;
+        width: 11vmin;
+        font-size: 5vw;
+    }
+
+    .logoActive {
         height: 13vw;
         width: 13vw;
         font-size: 7vw;
     }
-}
+} */
+
+
+/* @media only screen and (min-width: 1200px) {
+    .logoInactive {
+        height: 11vmin;
+        width: 11vmin;
+        font-size: 5vw;
+    }
+
+    .logoActive {
+        height: 13vw;
+        width: 13vw;
+        font-size: 7vw;
+    }
+} */

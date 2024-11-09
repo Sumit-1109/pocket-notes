@@ -18,7 +18,7 @@ function NoteTab({noteGroup, setActiveNote, activeNote}) {
 
   return (
     <div className={noteTabClass} onClick={handleClick} >
-      <NoteLogo noteGroupName={noteGroupName} noteLogoColor={noteLogoColor} activeNote={activeNote} />
+      <NoteLogo noteGroupName={noteGroupName} noteLogoColor={noteLogoColor} />
       <p className={`${styles.noteTabTitle} roboto-medium`}>{noteGroupName.trim()}</p>
     </div>
   )

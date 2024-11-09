@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './notelogo.module.css';
 
-function NoteLogo({noteGroupName, noteLogoColor, activeNote}) {
+function NoteLogo({noteGroupName, noteLogoColor}) {
 
     const extractInitials = (noteGroupName) => {
         return (noteGroupName.trim()
@@ -11,11 +11,9 @@ function NoteLogo({noteGroupName, noteLogoColor, activeNote}) {
                     .join(''))
     };
 
-    // const isActive =activeNote && (activeNote.noteGroupName === noteGroupName);
-    const logoClass = `${activeNote !== null ? styles.logoActive : styles.logoInactive}`;
 
   return (
-    <div className={`${logoClass} ${styles.logo} flex-center roboto-medium`}  style={{ backgroundColor: noteLogoColor }}>
+    <div className={`${styles.logo} flex-center roboto-medium`}  style={{ backgroundColor: noteLogoColor }}>
         {extractInitials(noteGroupName)}
       </div>
   )
