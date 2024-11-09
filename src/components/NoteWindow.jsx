@@ -35,7 +35,22 @@ function NoteWindow({
   }, [clickedNote.noteGroupName])
 
   const handleSaveNoteText = () => {
-    const updatedActualNotes = [...actualNotes, noteText];
+
+    const newNoteData = {
+      text: noteText,
+      timestamp: new Date()
+        .toLocaleString("en-GB", {
+          day: "numeric",
+          month: "short",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: true,
+        })
+        .replace(/,/, " • "),
+    };
+
+    const updatedActualNotes = [...actualNotes, newNoteData];
 
     const updatedNoteGroups = noteGroups.map((group) => {
       if (group.noteGroupName === clickedNote.noteGroupName){
@@ -94,7 +109,7 @@ function NoteWindow({
 
       <div className={styles.content} ref={contentRef}>
         {actualNotes.map((note, index) => (
-            <FinalNote key={index} noteText={note} />
+            <FinalNote key={index} noteText={note.text} timestamp={note.timestamp} />
         ) )}
       </div>
 
@@ -130,13 +145,23 @@ NoteWindow.propTypes = {
   clickedNote: PropTypes.shape({
     noteGroupName: PropTypes.string.isRequired,
     noteLogoColor: PropTypes.string.isRequired,
-    notes: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    notes: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string.isRequired,
+        timestamp: PropTypes.string.isRequired,
+      })
+    ).isRequired,
   }).isRequired,
   noteGroups: PropTypes.arrayOf(
     PropTypes.shape({
       noteGroupName: PropTypes.string.isRequired,
       noteLogoColor: PropTypes.string.isRequired,
-      notes: PropTypes.arrayOf( PropTypes.string.isRequired).isRequired,
+      notes: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string.isRequired,
+          timestamp: PropTypes.string.isRequired,
+        })
+      ).isRequired,
     })
   ).isRequired,
   setClickedNote: PropTypes.func.isRequired,

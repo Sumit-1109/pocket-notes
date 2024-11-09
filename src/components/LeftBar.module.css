@@ -52,15 +52,15 @@
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 426px) {
     .leftContainer{
         width: 100vw;
         height: 100dvh;
     }
     .heading{
         align-items: flex-start;
-        padding-top: 2%;
-        height: 10%;
+        padding-top: 3%;
+        height: 13%;
     }
     .headingText{
         font-size: 10vw;
@@ -79,15 +79,15 @@
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 425px) and (max-width: 768px) {
     .leftContainer{
         width: 35vw;
         height: 100dvh;
     }
     .heading{
         align-items: flex-start;
-        height: 10%;
-        padding-bottom: 5%;
+        height: 14%;
+        padding-bottom: 2%;
     }
     .headingText{
         font-size: 4vw;

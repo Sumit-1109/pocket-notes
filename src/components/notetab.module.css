@@ -24,7 +24,7 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 425px) {
     .noteTab{
         height: 8vh;
         padding-left: 5%;
@@ -38,45 +38,15 @@
 }
 
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 425px) and (max-width: 768px) {
     .noteTab{
-        height: 9vh;
+        height: 9.5vh;
         padding-left: 5%;
         margin: 0.5% 2%;
     }
         
     .noteTabTitle{
-        font-size: 3vw;
-        letter-spacing: 0.1vw;
+        font-size: 2vw;
+        letter-spacing: 0.05vw;
     }
 }
-
-
-/* @media only screen and (min-width: 768px) and (max-width: 992px) {
-    .logoInactive {
-        height: 11vmin;
-        width: 11vmin;
-        font-size: 5vw;
-    }
-
-    .logoActive {
-        height: 13vw;
-        width: 13vw;
-        font-size: 7vw;
-    }
-} */
-
-
-/* @media only screen and (min-width: 1200px) {
-    .logoInactive {
-        height: 11vmin;
-        width: 11vmin;
-        font-size: 5vw;
-    }
-
-    .logoActive {
-        height: 13vw;
-        width: 13vw;
-        font-size: 7vw;
-    }
-} */

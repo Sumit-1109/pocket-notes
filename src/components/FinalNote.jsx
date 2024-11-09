@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import styles from "./FinalNote.module.css";
 import { useEffect, useRef, useState } from "react";
 
-function FinalNote({ noteText }) {
+function FinalNote({ noteText, timestamp }) {
   const noteRef = useRef(null);
   const viewportHeight = window.innerHeight;
   const [noteHeight, setNoteHeight] = useState(0);
@@ -30,7 +30,7 @@ function FinalNote({ noteText }) {
       <p ref={noteRef} className={`${styles.actualNote} roboto-regular`}>
         {noteText}
       </p>
-      <p className={`${styles.noteTimestamp} roboto-regular`}>08/11/2024</p>
+      <p className={`${styles.noteTimestamp} roboto-regular`}>{timestamp}</p>
     </div>
   );
 }
@@ -39,4 +39,5 @@ export default FinalNote;
 
 FinalNote.propTypes = {
   noteText: PropTypes.string.isRequired,
+  timestamp: PropTypes.string.isRequired,
 };
