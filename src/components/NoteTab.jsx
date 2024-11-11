@@ -17,7 +17,7 @@ function NoteTab({noteGroup, setActiveNote, activeNote}) {
   const noteTabClass = `${isActive ? styles.active : ''} ${styles.noteTab}`;
 
   return (
-    <div className={noteTabClass} onClick={handleClick} >
+    <div className={`align-center ${noteTabClass}`} onClick={handleClick} >
       <NoteLogo noteGroupName={noteGroupName} noteLogoColor={noteLogoColor} />
       <p className={`${styles.noteTabTitle} roboto-medium`}>{noteGroupName.trim()}</p>
     </div>

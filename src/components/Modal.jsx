@@ -88,15 +88,16 @@ function Modal({
     <div className={`flex-center ${styles.modalScreen}`}>
       <div className={styles.modalBox}>
         <form
+          className={styles.formArea}
           id="modalData"
           onSubmit={handleSubmit}
-          className={styles.formarea}
           ref={modalRef}
         >
           <div className={`align-center ${styles.header}`}>
             <p className={`roboto-medium ${styles.title}`}>Create New group</p>
           </div>
 
+          <div className={`justify-center ${styles.InputArea}`}>
           <div className={`${styles.groupName}`}>
             <div className={`align-center ${styles.nameContainer}`}>
               <label htmlFor="groupName_Text" className="roboto-medium">
@@ -117,9 +118,9 @@ function Modal({
           </div>
 
           <div className={`align-center ${styles.colorTheme}`}>
-            <label className={`roboto-medium ${styles.chooseColorText}`}>
+            <p htmlFor="choosingColor" className={`roboto-medium ${styles.chooseColorText}`}>
               Choose Colour
-            </label>
+            </p>
             <div className={`flex-center ${styles.colorPallete}`}>
               {Object.keys(colorpallete).map((colorKey) => (
                 <div
@@ -131,6 +132,7 @@ function Modal({
                 ></div>
               ))}
             </div>
+          </div>
           </div>
 
           <div className={styles.createButton}>
@@ -161,8 +163,13 @@ Modal.propTypes = {
     PropTypes.shape({
       noteGroupName: PropTypes.string.isRequired,
       noteLogoColor: PropTypes.string.isRequired,
-      notes: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
-    }).isRequired,
+      notes: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string.isRequired,
+          timestamp: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+    })
   ).isRequired,
   setNoteGroups: PropTypes.func.isRequired,
   handleSaveData: PropTypes.func.isRequired,

@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import NoteLogo from "./NoteLogo";
 import PropTypes from "prop-types";
-import "./commonStyles.css";
 import styles from "./NoteWindow.module.css";
 import sendButton from "../assets/send.png";
 import sendActive from "../assets/send-active.png";
@@ -87,34 +86,32 @@ function NoteWindow({
   }, [actualNotes]);
 
   return (
-    <div className={styles.notewindow}>
-      <div className={styles.noteheader}>
-        <div className={styles.headerContent}>
+    <div className={styles.noteWindow}>
+      <div className={`align-center ${styles.noteWindowHeader}`}>
           <div className={styles.backButtonContainer}>
             <img src={back} alt="back button" className={styles.backButton} onClick={()=> {setClickedNote(null)}} />
           </div>
-          <div className={styles.headerLogo}>
+          <div className={styles.noteHeaderLogo}>
             <NoteLogo
               noteGroupName={clickedNote.noteGroupName}
               noteLogoColor={clickedNote.noteLogoColor}
               className={styles.NoteLogo}
             />
           </div>
-          <p className={`${styles.noteGroupNameTitle} roboto-medium`}>
+          <p className={`${styles.noteWindowTitle} roboto-medium`}>
             {clickedNote.noteGroupName.trim()}
           </p>
-        </div>
       </div>
 
 
-      <div className={styles.content} ref={contentRef}>
+      <div className={`${styles.content}`} ref={contentRef}>
         {actualNotes.map((note, index) => (
             <FinalNote key={index} noteText={note.text} timestamp={note.timestamp} />
         ) )}
       </div>
 
 
-      <div className={styles.footer}>
+      <div className={`flex-center ${styles.footer}`}>
         <form id="textBox" className={styles.noteTextArea} onSubmit={handleSubmit}>
           <textarea
             id="textArea"

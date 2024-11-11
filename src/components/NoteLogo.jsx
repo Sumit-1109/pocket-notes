@@ -8,7 +8,8 @@ function NoteLogo({noteGroupName, noteLogoColor}) {
                     .split(' ')
                     .map((word)=> word.slice(0,1).toUpperCase())
                     .slice(0,2)
-                    .join(''))
+                    .join('')
+                )
     };
 
 

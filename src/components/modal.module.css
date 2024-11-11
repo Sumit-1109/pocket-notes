@@ -1,108 +1,97 @@
 .modalScreen{
-    background-color: rgba(47, 47, 47, 0.75);
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(47, 47, 47, 0.75);
     backdrop-filter: blur(1.75px);
-}
-
-.formarea{
-    height: 100%;
-    width: 100%;
-    display: flex;
-        flex-direction: column;
-        justify-content: space-between;
 }
 
 .modalBox{
     background-color: rgba(255, 255, 255, 1);
-    width: 50%;
-    height: 50%;
-    padding: 2%;
-    border-radius: 1vw;
+    width: min(90%, 25rem);
+    height: 25%;
+    border-radius: 0.2rem;
 }
-
-.header{
-    height: 15%;
-}
-
-.title{
-    font-size: 2vw;
-    line-height: 2.25vw;
-    letter-spacing: 0.025vw;
-}
-
-.groupName{
-    height: 30%;
+.formArea{
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 2.25%;
 }
+
+.header{
+    padding-block: 0 2%;
+    font-size: calc(var(--fs-noteTab)/1.1);
+}
+
+.InputArea{
+    flex: 1;
+    padding: 0.5% 0 0 1%;
+    font-size: calc(var(--fs-noteTab)/1.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.groupName{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .nameContainer{
-    height: 95%;
-    width: 100%;
-    font-size: 1.75vw;
-    line-height: 2vw;
+    height: 82%;
 }
 
 .groupName_Text{
     border-radius: 22px;
-    height: 70%;
-    width: 70%;
+    width: 65%;
+    height: 90%;
     border: 2px solid rgba(204, 204, 204, 1);
     padding-left: 3%;
-    margin-left: 4%;
-    font-size: 1.75vw;
-    line-height: 1.75vw;
-    box-sizing: border-box;
-  }
-
+    margin-left: 2%;
+    font-size: calc(var(--fs-noteTab)/1.5);
+    line-height: 1.25;
+}
   .groupName_Text::placeholder{
-    font-size: 1.75vw;
-    color: rgba(151, 151, 151, 1);
-    line-height: 1.75vw;
+    font-size: calc(var(--fs-noteTab)/1.5);
+    line-height: 1.25;
   }
 
-  .colorTheme{
-    width: 100%;
-  }
 
-  .colorPallete{
-    width: 60%;
+.colorTheme{
+    height: 50%;
+    display: flex;
+}
+
+
+.colorPallete{
+    width: 55%;
     margin-left: 4%;
     height: 100%;
     overflow: visible;
-  }
-  
-  .chooseColor{
-    height: 7vh;
-    width: 7vh;
+}
+
+.chooseColor{
+    width: 20%;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     border: none;
-    margin: 1%;
+    margin: 1.2%;
     cursor: pointer;
     transition: box-shadow 0.3s ease-in-out;
   }
+  .chooseColor:focus{
+    outline: none;
+}
 
   .chooseColor:hover { 
     box-shadow: 0 0 0.5vw rgb(45, 43, 43);
 }
-
-.chooseColor:focus{
-    outline: none;
-}
-
 .chooseColor.glow{
     box-shadow: 0 0 0.4vw 0.09vw black;
     border: 0.1px rgb(0, 0, 0) solid;
-}
-
-  .chooseColorText{
-    font-size: 1.75vw;
-    line-height: 2vw;
 }
 
 .createButton{
@@ -119,115 +108,19 @@
     border-radius: 0.8vw;
     width: 20%;
     color: rgba(255, 255, 255, 1);
-    font-size: 1.25vw;
+    font-size: calc(var(--fs-noteTab)/1.5);
 }
 .errorMessage{
-    text-align: center;
     color: red;
-    height: 10%;
+    text-align: center;
+    height: 18%;
     padding: 0;
     margin: 0;
-    font-size: 0.8vw;
-    line-height: 1vw;
-    margin-top: -1.1%;
+    font-size: calc(var(--fs-noteTab)/2);
+    line-height: 1;
 }
 
-
-
-@media only screen and (max-width: 426px) {
-    .modalBox{
-        width: 85%;
-        height: 30%;
-    }
-    
-    .title{
-        font-size: 5vw;
-        line-height: 5.5vw;
-        letter-spacing: 0.2vw;
-    }  
-    .groupName{
-        height: 25%;
-    }
-    .nameContainer{
-        font-size: 4vw;
-        line-height: 4.25vw;
-    }
-    .groupName_Text{
-        height: 90%;
-        width: 65%;
-        margin-left: 2%;
-        font-size: 4vw;
-        line-height: 4vw;
-      }
-      .groupName_Text::placeholder{
-        font-size: 4vw;
-        line-height: 4.25vw;
-      }
-      .chooseColor{
-        height: 7vw;
-        width: 7vw;
-      }   
-      .chooseColorText{
-        font-size: 4vw;
-        line-height: 4.25vw;
-    }
-    .createButton{
-        height: 15%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .create{
-        width: 70%;
-        font-size: 3.75vw;
-    }
-    .errorMessage{
-    height: 15%;
-    font-size: 1.7vw;
-    line-height: 1.8vw;
-    margin-top: -1%;
-    }
-}
-
-@media only screen and (min-width: 425px) and (max-width: 768px) {
-    .modalBox{
-        width: 80%;
-        height: 45%;
-    }
-    .formarea{
-        
-    }
-    .title{
-        font-size: 5vw;
-        line-height: 1.2;
-        letter-spacing: 0.2vw;
-    }  
-    .groupName{
-        height: 15%;
-    }
-    .nameContainer{
-        font-size: 4vw;
-        line-height: 4.25vw;
-    }
-    .groupName_Text{
-        height: 90%;
-        width: 65%;
-        margin-left: 2%;
-        font-size: 4vw;
-        line-height: 4vw;
-      }
-      .groupName_Text::placeholder{
-        font-size: 4vw;
-        line-height: 4.25vw;
-      }
-      .chooseColor{
-        height: 7vw;
-        width: 7vw;
-      }   
-      .chooseColorText{
-        font-size: 4vw;
-        line-height: 4.25vw;
-    }
+@media (max-width: 600px) {
     .createButton{
         height: 25%;
         display: flex;
@@ -238,12 +131,43 @@
         margin-top: 2%;
         height: 65%;
         width: 70%;
-        font-size: 4vw;
     }
     .errorMessage{
     height: 15%;
-    font-size: 1.7vw;
-    line-height: 1.8vw;
     margin-top: -1%;
+    }
+}
+@media (min-width: 600px) {
+    .modalBox{
+        height: clamp(15rem, 40%, 35rem );
+        width: clamp(30rem, 45% ,80rem);
+        border-radius: 0.5rem;
+    }
+    .formArea{
+        padding: 5% 7%;
+    }
+
+    .header{
+    padding-block: 0 2%;
+    font-size: calc(var(--fs-heading)/1.5);
+}
+
+    .InputArea{
+        font-size: calc(var(--fs-noteTab)/1.1);
+    }
+
+    .groupName_Text{
+        border: 2px solid rgba(204, 204, 204, 1);
+        font-size: calc(var(--fs-noteTab)/1.1);
+    }
+      .groupName_Text::placeholder{
+        font-size: calc(var(--fs-noteTab)/1.1);
+      }
+
+      .createButton{
+        height: 15%;
+    }
+    .create{
+        font-size: calc(var(--fs-noteTab)/1.1);
     }
 }

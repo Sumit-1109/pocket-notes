@@ -29,7 +29,7 @@ function App() {
 
       <LeftBar setShowModal={setShowModal} noteGroups={noteGroups} setActiveNote={setActiveNote} activeNote={activeNote} />
 
-      {activeNote !== null ? <NoteWindow setNoteGroups={setNoteGroups} noteGroups={noteGroups} clickedNote={activeNote} setClickedNote={setActiveNote} handleSaveData={handleSaveData} /> : (<RightSection />)}
+      {activeNote !== null ? (<NoteWindow setNoteGroups={setNoteGroups} noteGroups={noteGroups} clickedNote={activeNote} setClickedNote={setActiveNote} handleSaveData={handleSaveData} />) : (<RightSection />)}
 
       {showModal && <Modal setShowModal={setShowModal} setModalData={setModalData} modalData={modalData} noteGroups={noteGroups} setNoteGroups={setNoteGroups} handleSaveData={handleSaveData} /> }
 

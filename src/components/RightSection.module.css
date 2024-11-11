@@ -1,5 +1,5 @@
 .rightContainer{
-    width: 78%;
+    flex: 2.75;
     height: 100%;
     background-color: rgba(218, 229, 245, 1);
     flex-direction: column;
@@ -49,7 +49,7 @@
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
     .rightContainer{
         display: none;
     }

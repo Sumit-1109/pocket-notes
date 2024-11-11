@@ -2,25 +2,16 @@
     border-radius: 50%;
     margin-right: 5%;
     color: #ffffff;
-    height: 4vw;
     width: 4vw;
+    aspect-ratio: 1/1;
     font-size: 2vw;
 }
 
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 600px) {
     .logo {
-        height: 10vw;
-        width: 10vw;
-        font-size: 6vw;
-    }
-}
-
-
-@media only screen and (min-width: 425px) and (max-width: 768px) {
-    .logo {
-        height: 5.5vw;
-        width: 5.5vw;
-        font-size: 3vw;
+        width: clamp(3rem, 14vw, 4rem);
+        aspect-ratio: 1/1;
+        font-size: var(--fs-m);
     }
 }

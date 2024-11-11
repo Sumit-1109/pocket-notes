@@ -19,7 +19,7 @@ function FinalNote({ noteText, timestamp }) {
     }
   }, []);
 
-  const baseMinHeightVh = 8;
+  const baseMinHeightVh = 15;
   const appliedMinHeight = Math.max(noteHeight, baseMinHeightVh);
 
   return (
