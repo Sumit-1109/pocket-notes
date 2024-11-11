@@ -31,6 +31,7 @@
     font-size: calc(var(--fs-heading)/1.2);
 }
 
+
 @media (max-width: 600px) {
     .heading{
         padding-block:  10% 6%;

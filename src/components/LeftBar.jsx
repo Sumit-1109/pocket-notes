@@ -1,14 +1,12 @@
 import PropTypes from "prop-types";
 
 import styles from "./LeftBar.module.css";
-import "./commonStyles.css";
 
 import NoteTab from "./NoteTab";
 
 function LeftBar({ setShowModal, noteGroups, setActiveNote, activeNote }) {
-  const leftContainerClass = `${styles.leftContainer} ${
-    activeNote ? styles.hideLeftSection : ""
-  }`;
+  const leftContainerClass = `${styles.leftContainer} ${activeNote ? styles.hideLeftSection : ""}`;
+
 
   return (
     <div className={leftContainerClass}>

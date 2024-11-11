@@ -3,8 +3,6 @@ import styles from './notetab.module.css';
 
 import NoteLogo from './NoteLogo';
 
-import './commonStyles.css'
-
 function NoteTab({noteGroup, setActiveNote, activeNote}) {
 
   const{noteGroupName, noteLogoColor} = noteGroup;
