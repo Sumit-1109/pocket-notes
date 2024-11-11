@@ -1,6 +1,7 @@
 import mainImage from "../assets/main-image.png";
 import lock from '../assets/lock.png'
 import styles from './RightSection.module.css'
+import '../index.css'
 
 function RightSection() {
   return (

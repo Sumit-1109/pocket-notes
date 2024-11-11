@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './notelogo.module.css';
+import '../index.css'
 
 function NoteLogo({noteGroupName, noteLogoColor}) {
 

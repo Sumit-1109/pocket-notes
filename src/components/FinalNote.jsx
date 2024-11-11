@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "./FinalNote.module.css";
 import { useEffect, useRef, useState } from "react";
+import '../index.css'
 
 function FinalNote({ noteText, timestamp }) {
   const noteRef = useRef(null);

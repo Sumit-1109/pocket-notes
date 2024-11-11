@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 
 import styles from "./modal.module.css";
+import '../index.css'
 
 function Modal({
   setShowModal,

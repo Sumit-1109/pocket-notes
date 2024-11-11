@@ -5,6 +5,7 @@ import styles from "./NoteWindow.module.css";
 import sendButton from "../assets/send.png";
 import sendActive from "../assets/send-active.png";
 import back from "../assets/back.png";
+import '../index.css'
 
 import FinalNote from "./FinalNote";
 

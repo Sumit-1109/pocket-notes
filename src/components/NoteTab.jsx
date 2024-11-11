@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './notetab.module.css';
+import '../index.css'
 
 import NoteLogo from './NoteLogo';
 

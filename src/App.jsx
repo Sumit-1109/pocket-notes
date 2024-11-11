@@ -6,6 +6,7 @@ import Modal from './components/Modal';
 import NoteWindow from './components/NoteWindow';
 
 import './App.css'
+import './index.css'
 
 function App() {
 
